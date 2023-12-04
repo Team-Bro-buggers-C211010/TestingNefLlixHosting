@@ -4,10 +4,12 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Profile from './pages/Profile'
 import Home from './pages/Home'
+import Navbar from './components/Navbar';
 
 function App() {
   return (
   <>
+  <Navbar/>
   <Routes>
     <Route path="/" element={<Home/>}/>
     <Route path="/login" element={<Login/>}/>
