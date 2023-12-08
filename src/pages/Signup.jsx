@@ -4,9 +4,9 @@ import { Await, Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/Authcontext';
 
 const Signup = () => {
-  const [rememberLogin, setRememberLogin] = useState(true)
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [rememberLogin, setRememberLogin] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("")
   
   const { user, signUp } = UserAuth();
 
