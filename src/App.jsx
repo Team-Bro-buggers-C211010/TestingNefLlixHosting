@@ -5,10 +5,12 @@ import Signup from './pages/Signup'
 import Profile from './pages/Profile'
 import Home from './pages/Home'
 import Navbar from './components/Navbar';
+import { AuthContextProvider } from './context/Authcontext';
 
 function App() {
   return (
   <>
+  <AuthContextProvider>
   <Navbar/>
   <Routes>
     <Route path="/" element={<Home/>}/>
@@ -16,6 +18,7 @@ function App() {
     <Route path="/signup" element={<Signup/>}/>
     <Route path="/profile" element={<Profile/>}/>
   </Routes>
+  </AuthContextProvider>
   </>);
 };
 
