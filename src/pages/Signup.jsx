@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Await, Link, useNavigate } from 'react-router-dom'
-import { UserAuth } from '../context/Authcontext';
+import { UserAuth } from '../context/AuthContext';
 
 const Signup = () => {
   const [rememberLogin, setRememberLogin] = useState(true);
