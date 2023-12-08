@@ -24,3 +24,16 @@ body{
   background-color:black;
   color: white;
 }
+
+.cards {
+  display: inline-block;
+  transition: transform .2s;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.19rem;
+  cursor:pointer;
+  height: 10em;
+  z-index:0;
+  border: 1px solid rgb(99, 99, 99);
+}

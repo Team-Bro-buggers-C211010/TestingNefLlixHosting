@@ -1,14 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createImageUrl } from '../services/movieServices';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
-
+import Skeleton,{SkeletonTheme} from 'react-loading-skeleton';
 const MovieItem = ({ movie }) => {
   const [like, setLike] = useState(false);
+  const[isLoading,setIsLoading] = useState(true);
+
+  useEffect(() =>{
+    setTimeout(() =>{setIsLoading(false)},1500)
+  },[]);
 
   const { title, backdrop_path, poster_path } = movie;
 
   return (
-    <div className="relative w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block rounded-lg overflow-hidden cursor-pointer m-2">
+    // Here added a Skeleton package
+    isLoading ?
+      <div className="cards dark:bg-gray-900">
+      <SkeletonTheme color="#202020" highlightColor="#444">
+        <Skeleton duration={2} className=" relative w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block rounded-lg overflow-hidden"/>
+      </SkeletonTheme>
+      </div>
+      :
+      <div className="relative w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block rounded-lg overflow-hidden cursor-pointer m-2">
       <img
         className="w-full h-40 block object-cover object-top"
         src={createImageUrl(backdrop_path ?? poster_path, "w500")}

@@ -36,7 +36,7 @@ const Hero= ()=> {
                         <button className="capitalize border border-red-700 text-white py-2 px-5 ml-4">watch later</button>
                     </div>
                     <p className="text-gray-400 text-sm">{release_date}</p>
-                    <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] text-gray-200">{truncate(overview,300)}</p>
+                    <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[40%] text-gray-200 text-ellipsis">{truncate(overview,300)}</p>
                 </div>
         </div>
     </div>
