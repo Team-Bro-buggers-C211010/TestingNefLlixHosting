@@ -5,7 +5,7 @@ import Signup from './pages/Signup'
 import Profile from './pages/Profile'
 import Home from './pages/Home'
 import Navbar from './components/Navbar';
-import { AuthContextProvider } from './context/Authcontext';
+import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
