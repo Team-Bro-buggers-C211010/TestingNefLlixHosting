@@ -31,7 +31,7 @@ const MovieItem = ({ movie }) => {
         favShows: arrayUnion({ ...movie }),
       });
     } else {
-      alert('Login to save a movie');
+      alert('Login to save a movie Or Do not have Acoount? Then SignUp first.');
     }
   };
 
